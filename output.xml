@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220703 09:45:24.668" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\ç44 444444ooooooooo\Desktop\RobotProject\TestCases">
+<suite id="s1-s1" name="LoginTest" source="C:\Users\ç44 444444ooooooooo\Desktop\RobotProject\TestCases\LoginTest.robot">
+<test id="s1-s1-t1" name="Registro de usuario" line="16">
+<kw name="Open Session" library="base" type="SETUP">
+<kw name="Pegar Valor Json" library="Config">
+<var>${base_url}</var>
+<arg>base_url</arg>
+<msg timestamp="20220703 09:45:25.277" level="INFO">${base_url} = https://phptravels.net/</msg>
+<status status="PASS" starttime="20220703 09:45:25.272" endtime="20220703 09:45:25.277"/>
+</kw>
+<kw name="Pegar Valor Json" library="Config">
+<var>${brower}</var>
+<arg>browser</arg>
+<msg timestamp="20220703 09:45:25.279" level="INFO">${brower} = chrome</msg>
+<status status="PASS" starttime="20220703 09:45:25.277" endtime="20220703 09:45:25.279"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${base_url}</arg>
+<arg>${brower}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220703 09:45:25.279" level="INFO">Opening browser 'chrome' to base url 'https://phptravels.net/'.</msg>
+<status status="PASS" starttime="20220703 09:45:25.279" endtime="20220703 09:45:32.787"/>
+</kw>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220703 09:45:32.787" endtime="20220703 09:45:32.787"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220703 09:45:32.787" endtime="20220703 09:45:33.012"/>
+</kw>
+<status status="PASS" starttime="20220703 09:45:25.272" endtime="20220703 09:45:33.012"/>
+</kw>
+<kw name="Acessar o site de Registro" library="SignupPage">
+<kw name="Ir para" library="base">
+<arg>signup</arg>
+<kw name="Pegar Valor Json" library="Config">
+<var>${base_url}</var>
+<arg>base_url</arg>
+<msg timestamp="20220703 09:45:33.024" level="INFO">${base_url} = https://phptravels.net/</msg>
+<status status="PASS" starttime="20220703 09:45:33.021" endtime="20220703 09:45:33.024"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${base_url}${path}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220703 09:45:33.027" level="INFO">Opening url 'https://phptravels.net/signup'</msg>
+<status status="PASS" starttime="20220703 09:45:33.024" endtime="20220703 09:45:34.708"/>
+</kw>
+<status status="PASS" starttime="20220703 09:45:33.016" endtime="20220703 09:45:34.709"/>
+</kw>
+<status status="PASS" starttime="20220703 09:45:33.014" endtime="20220703 09:45:34.709"/>
+</kw>
+<kw name="Preencher as informações da tela" library="SignupPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${button_cookie}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220703 09:45:34.711" level="INFO">Clicking button 'xpath://button[text()="Got It"]'.</msg>
+<status status="PASS" starttime="20220703 09:45:34.710" endtime="20220703 09:45:34.814"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${button_cookie}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20220703 09:45:34.814" endtime="20220703 09:45:34.843"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${account_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220703 09:45:34.843" level="INFO">Clicking element 'xpath://span[@class="selection"]/span'.</msg>
+<msg timestamp="20220703 09:45:36.105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220703 09:45:36.106" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (677, 693)
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00DBD953+2414931]
+	Ordinal0 [0x00D4F5E1+1963489]
+	Ordinal0 [0x00C3C6B8+837304]
+	Ordinal0 [0x00C6FC27+1047591]
+	Ordinal0 [0x00C6DC08+1039368]
+	Ordinal0 [0x00C6B90B+1030411]
+	Ordinal0 [0x00C6A659+1025625]
+	Ordinal0 [0x00C60293+983699]
+	Ordinal0 [0x00C8449C+1131676]
+	Ordinal0 [0x00C5FC74+982132]
+	Ordinal0 [0x00C846B4+1132212]
+	Ordinal0 [0x00C94812+1198098]
+	Ordinal0 [0x00C842B6+1131190]
+	Ordinal0 [0x00C5E860+976992]
+	Ordinal0 [0x00C5F756+980822]
+	GetHandleVerifier [0x0102CC62+2510274]
+	GetHandleVerifier [0x0101F760+2455744]
+	GetHandleVerifier [0x00E4EABA+551962]
+	GetHandleVerifier [0x00E4D916+547446]
+	Ordinal0 [0x00D55F3B+1990459]
+	Ordinal0 [0x00D5A898+2009240]
+	Ordinal0 [0x00D5A985+2009477]
+	Ordinal0 [0x00D63AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+</msg>
+<status status="FAIL" starttime="20220703 09:45:34.843" endtime="20220703 09:45:36.120"/>
+</kw>
+<kw name="Selecionar Tipo" library="SignupPage">
+<arg>Agent</arg>
+<status status="NOT RUN" starttime="20220703 09:45:36.120" endtime="20220703 09:45:36.120"/>
+</kw>
+<status status="FAIL" starttime="20220703 09:45:34.710" endtime="20220703 09:45:36.121"/>
+</kw>
+<kw name="Clicar em Registrar" library="SignupPage">
+<status status="NOT RUN" starttime="20220703 09:45:36.121" endtime="20220703 09:45:36.121"/>
+</kw>
+<kw name="Close Session" library="base" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220703 09:45:36.121" endtime="20220703 09:45:38.552"/>
+</kw>
+<status status="PASS" starttime="20220703 09:45:36.121" endtime="20220703 09:45:38.553"/>
+</kw>
+<tag>login</tag>
+<tag>registro</tag>
+<status status="FAIL" starttime="20220703 09:45:25.272" endtime="20220703 09:45:38.556">ElementClickInterceptedException: Message: element click intercepted: Element is not clickable at point (677, 693)
+  (Session info: chrome=103.0.5060.66)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00DBD953+2414931]
+	Ordinal0 [0x00D4F5E1+1963489]
+	Ordinal0 [0x00C3C6B8+837304]
+	Ordinal0 [0x00C6FC27+1047591]
+	Ordinal0 [0x00C6DC08+1039368]
+	Ordinal0 [0x00C6B90B+1030411]
+	Ordinal0 [0x00C6A659+1025625]
+	Ordinal0 [0x00C60293+983699]
+	Ordinal0 [0x00C8449C+1131676]
+	Ordinal0 [0x00C5FC74+982132]
+	Ordinal0 [0x00C846B4+1132212]
+	Ordinal0 [0x00C94812+1198098]
+	Ordinal0 [0x00C842B6+1131190]
+	Ordinal0 [0x00C5E860+976992]
+	Ordinal0 [0x00C5F756+980822]
+	GetHandleVerifier [0x0102CC62+2510274]
+	GetHandleVerifier [0x0101F760+2455744]
+	GetHandleVerifier [0x00E4EABA+551962]
+	GetHandleVerifier [0x00E4D916+547446]
+	Ordinal0 [0x00D55F3B+1990459]
+	Ordinal0 [0x00D5A898+2009240]
+	Ordinal0 [0x00D5A985+2009477]
+	Ordinal0 [0x00D63AD1+2046673]
+	BaseThreadInitThunk [0x771CFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77667A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77667A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220703 09:45:24.714" endtime="20220703 09:45:38.606"/>
+</suite>
+<status status="FAIL" starttime="20220703 09:45:24.672" endtime="20220703 09:45:38.615"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login</stat>
+<stat pass="0" fail="1" skip="0">registro</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="LoginTest">TestCases.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
